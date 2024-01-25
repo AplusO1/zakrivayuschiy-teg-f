@@ -2,7 +2,7 @@
   max-inline-size: 1440px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font-family), sans-serif;
+  font-family: var(--main-font-family), fantasy;
   font-variation-settings: var(--weight-card-text, 400);
   background-color: var(--bg-color, #fff);
   background-image: var(--bg-img, #fff);
@@ -13,7 +13,7 @@
 }
 
 .header {
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, fantasy);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,13 +26,19 @@
   gap: 21px;
 }
 
-.header__title {
-  font-size: 64px;
+.header__logo {
+  display: flex;
+  flex-direction: column;
   margin-block-start: 135px;
+  gap: 20px;
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__subtitle {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
 .theme-menu__list {
@@ -130,7 +136,7 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, fantasy);
   color: var(--text-color, #000);
   font-size: 14px;
   font-weight: 400;
@@ -170,6 +176,10 @@
   transition: border 0.3s ease;
 }
 
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
 .card__icon-button:focus {
   outline: none;
 }
@@ -191,7 +201,12 @@
 }
 
 .card__like-button:focus {
-  box-shadow: 2px 2px currentColor;
+  box-shadow: 2px 2px var(--acc-color, #000);
+}
+
+.card__like-button:focus-visible {
+  border: 2px solid var(--acc-color, #000);
+  outline: none;
 }
 
 .card__like-button::before {
@@ -212,7 +227,7 @@
 }
 
 .button__text {
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, fantasy);
   font-size: 14px;
   color: var(--button-text-color, #fff);
   position: relative;
@@ -234,7 +249,12 @@
 }
 
 .footer__save:focus {
-  box-shadow: 2px 2px currentColor;
+  box-shadow: 2px 2px var(--acc-color, #000);
+}
+
+.footer__save:focus-visible {
+  border: 2px solid var(--acc-color, #000);
+  outline: none;
 }
 
 .footer__save::before {
@@ -262,12 +282,13 @@
   height: 21px;
 }
 
-.dialog {
+.dialog[open] {
   padding: 30px;
   background-color: var(--bg-color, #fff);
   max-inline-size: 357px;
   min-inline-size: 300px;
   border: 2px solid var(--acc-color, #000);
+  outline: none;
 }
 
 .dialog::backdrop {
@@ -294,7 +315,7 @@
   line-height: 150%;
   text-transform: uppercase;
   color: var(--acc-color, #000);
-  font-family: var(--accent-font-family, sans-serif);
+  font-family: var(--accent-font-family, fantasy);
   padding-inline-end: 20px;
 }
 
@@ -310,7 +331,12 @@
 }
 
 .dialog__btn:focus {
-  box-shadow: 2px 2px currentColor;
+  box-shadow: 2px 2px var(--acc-color, #000);
+}
+
+.dialog__btn:focus-visible {
+  border: 2px solid var(--acc-color, #000);
+  outline: none;
 }
 
 .dialog__btn::before {
@@ -372,13 +398,8 @@
 
 @media (width <= 375px) {
 
-  .header__title {
-    font-size: 49px;
-    margin-block-start: 120px;
-  }
-
-  .header__subtitle {
-    font-size: 14px;
+  .header__logo {
+    margin-block-start: 119px;
   }
 
   .dialog {
@@ -388,6 +409,10 @@
 
   .footer__save {
     flex-direction: column;
+  }
+
+  .card__img-text {
+    right: 9px;
   }
 
   .floppy-svg {

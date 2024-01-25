@@ -3,9 +3,19 @@
   --acc-color: #00cc14;
   --weight-card-title: 465;
   --text-stroke: #000;
-  --bg-img: repeating-linear-gradient(to right, #000 2px, transparent 4px),
-    repeating-linear-gradient(to bottom, #007f0c 2px, #004306 4px),
-    linear-gradient(to bottom, #007f0c, #004306);
+  --bg-img: repeating-linear-gradient(
+    to left,
+    #000000 0 2px,
+    #00000000 2px 4px
+  ),
+  repeating-linear-gradient(
+    to bottom, #000000 0 2px,
+    #00000000 2px 4px
+    ),
+  linear-gradient(
+    to bottom, #007f0c,
+   #004306
+    );
   --text-color: #00cc14;
   --contour-color: #00cc14;
   --button-text-color: #00cc14;
@@ -16,10 +26,45 @@
   --acc-color: #000;
   --weight-card-title: 400;
   --text-stroke: #fff;
-  --bg-img: repeating-linear-gradient(to right, #d3d3d3 2px, transparent 4px),
-    repeating-linear-gradient(to bottom, #e7e7e7 2px, #1a1a1a 4px),
-    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --bg-img: repeating-linear-gradient(
+    to left,
+    #d3d3d3 0 2px,
+    #d3d3d300 2px 4px
+  ),
+  repeating-linear-gradient(
+    to bottom, #d3d3d3 0 2px,
+   #d3d3d300 2px 4px
+   ),
+  linear-gradient(
+    to bottom, #e7e7e7 0.01%,
+   #1a1a1a
+   );
   --text-color: #000;
   --contour-color: #000;
   --button-text-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000;
+    --acc-color: #00cc14;
+    --weight-card-title: 465;
+    --text-stroke: #000;
+    --bg-img: repeating-linear-gradient(
+      to left,
+      #000000 0 2px,
+      #00000000 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom, #000000 0 2px,
+      #00000000 2px 4px
+      ),
+    linear-gradient(
+      to bottom, #007f0c,
+     #004306
+      );
+    --text-color: #00cc14;
+    --contour-color: #00cc14;
+    --button-text-color: #00cc14;
+  }
 }
