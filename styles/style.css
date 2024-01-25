@@ -150,11 +150,11 @@
 .card__content {
   font-size: 18px;
   line-height: 21px;
-  padding: 22px 25px; 
+  padding: 22px 25px;
 }
 
 .card__content:last-of-type {
-  padding: 7px 25px; 
+  padding: 7px 25px;
 }
 
 .card__subtext {
