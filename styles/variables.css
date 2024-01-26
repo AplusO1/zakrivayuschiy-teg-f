@@ -11,6 +11,7 @@
   --text-color: #000;
   --button-text-color: #fff;
   --fill-color: red;
+  --headings-font-weight: 700;
   --bg-img: repeating-linear-gradient(
     to left,
     #d3d3d3 0 2px,

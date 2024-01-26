@@ -19,6 +19,7 @@
   --text-color: #00cc14;
   --contour-color: #00cc14;
   --button-text-color: #00cc14;
+  --headings-font-weight: 785;
 }
 
 :root.theme-light {
@@ -42,6 +43,7 @@
   --text-color: #000;
   --contour-color: #000;
   --button-text-color: #fff;
+  --headings-font-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,5 +68,6 @@
     --text-color: #00cc14;
     --contour-color: #00cc14;
     --button-text-color: #00cc14;
+    --headings-font-weight: 785;
   }
 }
